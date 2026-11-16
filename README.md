@@ -15,7 +15,7 @@ As in the example, it uses long hold of buttons L and A. It now has
 | long A | bpm mode: increases faster, option mode: resets time signature to 0 |
 | long L | bpm mode: decreases faster, option mode: resets subdivision to 1  |
 | L + A | toggles option mode/bpm mode |
-| Triple tap | toggles on/off |
+| Triple tap | toggles on/off (does not seem to work) |
 
 enjoy.
 
