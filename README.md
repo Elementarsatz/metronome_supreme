@@ -10,10 +10,10 @@ As in the example, it uses long hold of buttons L and A. It now has
 
 | Input | Event |
 | ----- | ----- |
-| short L | bpm mode: increases by 1, option mode: changes time signature (cycles between 0 (no strong beat) and 7) |
-| short A | bpm mode: decreases by 1, option mode: changes subdivision (cycles between 1 (no subdivision) and 4)|
-| long L | bpm mode: increases faster, option mode: - |
-| long A | bpm mode: decreases faster, option mode: -  |
+| short A | bpm mode: increases by 1, option mode: changes time signature (cycles between 0 (no strong beat) and 7) |
+| short L | bpm mode: decreases by 1, option mode: changes subdivision (cycles between 1 (no subdivision) and 4)|
+| long A | bpm mode: increases faster, option mode: resets time signature to 0 |
+| long L | bpm mode: decreases faster, option mode: resets subdivision to 1  |
 | L + A | toggles option mode/bpm mode |
 | Triple tap | toggles on/off |
 
