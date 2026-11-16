@@ -89,10 +89,18 @@ function a_long() {
   if (state == 1) {
     startRepeat(1);
   }
+  if (state == -1) {
+    compas = 0;
+    startTicking();
+  }
 }
 function l_long() {
   if (state == 1) {
     startRepeat(-1);
+  }
+  if (state == -1) {
+    sub = 0;
+    startTicking();
   }
 }
 
@@ -133,14 +141,14 @@ function l_short() {
 }
 
 function changeSub(prevState) {
-  if (a_press === 1 && l_press === 0 && state === prevState) {
+  if (a_press === 0 && l_press === 1 && state === prevState) {
     startSub();
     show();
   }
 }
 
 function changeCompas(prevState) {
-  if (a_press === 0 && l_press === 1 && state === prevState) {
+  if (a_press === 1 && l_press === 0 && state === prevState) {
     compasMod();
     show();
   }
@@ -155,14 +163,14 @@ function doublePress() {
     return;
   }
 
-  if (state == -1 && a_press === 1) {
+  if (state == -1 && l_press === 1) {
     stopTimeout(pressTimer);
     previousState = state;
 
     pressTimer = Ollee.setTimeout("changeSub(previousState)", 70);
   }
 
-  if (state == -1 && l_press === 1) {
+  if (state == -1 && a_press === 1) {
     stopTimeout(pressTimer);
     previousState = state;
 
